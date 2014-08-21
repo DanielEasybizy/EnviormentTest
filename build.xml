@@ -4,7 +4,7 @@
   <!--create a web site name TestSite and set it's directory path to c:\TestSite-->
   <!--open Developer Command Prompt as administrator , go to the project directory and type this two commands-->
   <!-- msbuild build.xml /T:Package /P:PublishProfile=Test /p:Platform="AnyCPU" -->
-  <!--C:\Users\daniel\Documents\Visual Studio 2012\Projects\EnviormentTest\.out\Package>EnviormentTest-Test.deploy.cmd /M:localhost /y -AllowUntrusted:TRUE-->
+  <!--**ProjectDirectoryPath**\EnviormentTest\.out\Package>EnviormentTest-Test.deploy.cmd /M:localhost /y -AllowUntrusted:TRUE-->
 
   <!-- Import MSBuildExtensionsPack -->
   <Import Project="$(MSBuildExtensionsPath)\ExtensionPack\4.0\MSBuild.ExtensionPack.tasks"/>
@@ -16,7 +16,6 @@
     <Configuration Condition="$(Configuration) == ''">Release</Configuration>
     <PublishProfile Condition="$(PublishProfile) == ''">Test</PublishProfile>
     <OutputDir>.out</OutputDir>
-    <!--<OutputFolder>C:\TestSite</OutputFolder>-->
     <Platform>AnyCPU</Platform>
     <NUnitConsole>packages\NUnit.Runners.2.6.1\tools\nunit-console.exe</NUnitConsole>
   </PropertyGroup>
