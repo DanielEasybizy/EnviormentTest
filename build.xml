@@ -53,7 +53,7 @@
   </Target>
 
   <!-- Run NUnit Tests -->
-  <!--<Target Name="Test" DependsOnTargets="Build">
+  <Target Name="Test" DependsOnTargets="Build">
     <PropertyGroup>
       <CurrentProject>%(TestProjects.Identity)</CurrentProject>
     </PropertyGroup>
@@ -74,7 +74,7 @@
     <Exec Command="$(NUnitCommand)">
       <Output TaskParameter="ExitCode" ItemName="ExitCodes" />
     </Exec>
-  </Target>-->
+  </Target>
 
   <Target Name="Package" >
 
