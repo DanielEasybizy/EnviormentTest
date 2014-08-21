@@ -1,5 +1,8 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-
+  
+  <!--install ms build http://msbuildextensionpack.codeplex.com/-->
+  <!--create a web site name TestSite and set it's directory path to c:\TestSite-->
+  <!--open Developer Command Prompt as administrator , go to the project directory and type this two commands-->
   <!-- msbuild build.xml /T:Package /P:PublishProfile=Test /p:Platform="AnyCPU" -->
   <!--C:\Users\daniel\Documents\Visual Studio 2012\Projects\EnviormentTest\.out\Package>EnviormentTest-Test.deploy.cmd /M:localhost /y -AllowUntrusted:TRUE-->
 
