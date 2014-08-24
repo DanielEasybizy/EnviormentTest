@@ -10,7 +10,7 @@ namespace EnviormentTest.Controllers
     {
         public ActionResult Index()
         {
-            /*This is a test notes!. Edit them and push!*/
+            /*This is a test notes!. Edit themnnn and push!*/
             return View();
         }
     }
