@@ -88,7 +88,7 @@
     </ItemGroup>
 
     <Copy SourceFiles="@(OutputFiles)"
-      DestinationFiles="@(OutputFiles->'.out\Package\%(RecursiveDir)%(Filename)%(Extension)')" />
+      DestinationFiles="@(OutputFiles->'out\Package\%(RecursiveDir)%(Filename)%(Extension)')" />
   </Target>
 
   <!--<Import Project="Webapplication.csproj" />-->
