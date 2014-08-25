@@ -15,7 +15,7 @@
     <MyAppTests>EnviormentTest.Tests</MyAppTests>
     <Configuration Condition="$(Configuration) == ''">Release</Configuration>
     <PublishProfile Condition="$(PublishProfile) == ''">Test</PublishProfile>
-    <OutputDir>.out</OutputDir>
+    <OutputDir>out</OutputDir>
     <Platform>AnyCPU</Platform>
     <NUnitConsole>packages\NUnit.Runners.2.6.1\tools\nunit-console.exe</NUnitConsole>
   </PropertyGroup>
