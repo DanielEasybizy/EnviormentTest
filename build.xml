@@ -3,7 +3,8 @@
   <!--install ms build http://msbuildextensionpack.codeplex.com/-->
   <!--create a web site name TestSite and set it's directory path to c:\TestSite-->
   <!--open Developer Command Prompt as administrator , go to the project directory and type this two commands-->
-  <!-- msbuild build.xml /T:Package /P:PublishProfile=Test /p:Platform="AnyCPU" -->
+  <!-- msbuild build.xml /T:Package /P:PublishProfile=Test /p:Platform="AnyCPU" 
+  C:\Windows\Microsoft.NET\Framework64\v4.0.30319\msbuild.exe /T:Package /P:PublishProfile=Test /p:Platform=AnyCPU /p:VisualStudioVersion=10.0 build.xml-->
   <!--**ProjectDirectoryPath**\EnviormentTest\.out\Package>EnviormentTest-Test.deploy.cmd /M:localhost /y -AllowUntrusted:TRUE-->
 
   <!-- Import MSBuildExtensionsPack -->
@@ -55,7 +56,7 @@
   </Target>
 
   <!-- Run NUnit Tests -->
-  <Target Name="Test" DependsOnTargets="Build">
+  <!--<Target Name="Test" DependsOnTargets="Build">
     <PropertyGroup>
       <CurrentProject>%(TestProjects.Identity)</CurrentProject>
     </PropertyGroup>
@@ -76,10 +77,9 @@
     <Exec Command="$(NUnitCommand)">
       <Output TaskParameter="ExitCode" ItemName="ExitCodes" />
     </Exec>
-  </Target>
+  </Target>-->
 
-  <Target Name="Package" >
-
+  <!--<Target Name="Package" >
     <MSBuild Projects="$(MyApp)\$(MyApp).csproj"
       Properties="Configuration=$(Configuration);DeployOnBuild=True;PublishProfile=$(PublishProfile)" />
 
@@ -89,7 +89,7 @@
 
     <Copy SourceFiles="@(OutputFiles)"
       DestinationFiles="@(OutputFiles->'.out\Package\%(RecursiveDir)%(Filename)%(Extension)')" />
-  </Target>
+  </Target>-->
 
   <!--<Import Project="Webapplication.csproj" />-->
 
